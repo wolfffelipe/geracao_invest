@@ -20,6 +20,7 @@ class SignUpScreen extends StatelessWidget {
         children: [
           SvgPicture.asset(
             "assets/icons/Sign_Up_bg.svg",
+            fit: BoxFit.cover,
             height: MediaQuery.of(context).size.height,
             // Now it takes 100% of our height
           ),
@@ -31,7 +32,7 @@ class SignUpScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Create Account",
+                      "Criar conta",
                       style: Theme.of(context)
                           .textTheme
                           .headline5!
@@ -39,7 +40,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Text("Already have an account?"),
+                        Text("Já tem uma conta?"),
                         TextButton(
                           onPressed: () => Navigator.push(
                               context,
@@ -47,7 +48,7 @@ class SignUpScreen extends StatelessWidget {
                                 builder: (context) => SignInScreen(),
                               )),
                           child: Text(
-                            "Sign In!",
+                            "Entrar!",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -66,7 +67,7 @@ class SignUpScreen extends StatelessWidget {
                             _formKey.currentState!.save();
                           }
                         },
-                        child: Text("Sign Up"),
+                        child: Text("Cadastrar"),
                       ),
                     ),
                   ],

@@ -19,6 +19,7 @@ class SignInScreen extends StatelessWidget {
         children: [
           SvgPicture.asset(
             "assets/icons/Sign_Up_bg.svg",
+            fit: BoxFit.cover,
             height: MediaQuery.of(context).size.height,
             // Now it takes 100% of our height
           ),
@@ -32,7 +33,7 @@ class SignInScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Sign In",
+                      "Login",
                       style: Theme.of(context)
                           .textTheme
                           .headline5!
@@ -40,7 +41,7 @@ class SignInScreen extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Text("Don't have an account?"),
+                        Text("Ainda não tem uma conta?"),
                         TextButton(
                           onPressed: () => Navigator.push(
                             context,
@@ -49,7 +50,7 @@ class SignInScreen extends StatelessWidget {
                             ),
                           ),
                           child: Text(
-                            "Sign Up!",
+                            "Clique aqui!",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -69,7 +70,7 @@ class SignInScreen extends StatelessWidget {
                             //  Sign in also done
                           }
                         },
-                        child: Text("Sign In"),
+                        child: Text("Entrar"),
                       ),
                     ),
                   ],
